@@ -24,25 +24,51 @@
   <style>
     body {
       background-image: url('img/tile_0001.png');
-      background-size: 64px 64px;
+      background-size: 4rem 4rem;
+      image-rendering: pixelated;
       font-family: "Times New Roman", Times, serif;
+      max-width: 50rem;
+      margin: auto;
+    }
+
+    .title-box, .content-box {
+      background: lightgoldenrodyellow;
+      border: 5px solid darkolivegreen;
+      margin-bottom: 2rem;
+    }
+
+    .title-box {
+      margin-top: 4rem;
+    }
+
+    .footer-box {
+      display: inline-block;
+      background: lightgoldenrodyellow;
+      border: 5px solid darkolivegreen;
     }
 
     h1 {
-      background-color: yellow;
-      color: black;
-    }
-
-    p {
-      color: black;
+      display: inline-block;
+      background-color: greenyellow;
+      color: darkolivegreen;
     }
   </style>
 </head>
 
 <body>
-  <div>
-    <h1>Welcome to my front yard. 🌻🌻</h1>
-    <p>Enjoy the grass :)</p>
+  <div class="title-box">
+    <marquee behavior="alternate"><h1>🌻 Welcome to my front yard. 🌻</h1></marquee>
+  </div>
+
+  <div class="content-box">
+    <p>Hi, welcome to my little corner of the Internet :)</p>
+    <p>I like to design and make cool websites and apps. I also dabble in linguistics and calligraphy which I will be
+      sharing here soon. </p>
+    <p>I love languages. Languages that I speak include English, Chinese, Japanese, Toki Pona, and French (still learning so not that fluent yet).</p>
+  </div>
+
+  <div class="footer-box">
+    <p>Site last updated: 12 August 2023.</p>
   </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
