@@ -65,11 +65,24 @@
     }
 
     h1 {
-      display: inline-block;
       font-size: 2rem;
       background-color: greenyellow;
       filter: drop-shadow(0.4rem 0.4rem 0 darkolivegreen);
       animation: infinite 1s alternate title-bounce linear;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      background-color: greenyellow;
+      filter: drop-shadow(0.2rem 0.2rem 0 darkolivegreen);
+      animation: infinite 1s alternate title-bounce linear;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: green;
+      font-variation-settings: "wght" 600;
+      text-decoration: green wavy underline;
     }
 
     @keyframes title-bounce {
@@ -92,6 +105,7 @@
   </div>
 
   <div class="content-box box">
+    <h2>About me</h2>
     <p><strong>Hi 👋, welcome to my little corner of the Internet :)</strong></p>
     <p>I like to design and program cool and useful websites and apps. My passion is in software development, AI, and
       biology and linguistics. I'll share some of my work in linguistics and calligraphy soon. </p>
@@ -99,15 +113,21 @@
       (still learning so not that fluent yet).</p>
   </div>
 
-  <div class="box">
+  <div class="site-info-box box">
+    <h2>Site info</h2>
     <span style="margin-right: 1rem">Visitor counter:</span>
     <span style="pointer-events: none"><script type="text/javascript" src="//counter.websiteout.net/js/5/0/0/0"></script></span>
     <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-left: 1rem">
   </div>
 
   <div class="footer-box box">
-    <small>That's all from me, thanks for visiting my site! 💫 </small>
-    <small>Site last updated: 12 August 2023.</small>
+    <p>
+      <small>That's all from me, thanks for visiting my site! 💫 </small>
+      <small>Site last updated: 12 August 2023.</small>
+    </p>
+    <p>
+      <small><a href="https://links.cervonwong.com" target="_blank">Visit my other websites.</a></small>
+    </p>
   </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
