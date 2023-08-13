@@ -37,12 +37,9 @@
       background-size: 4rem 4rem;
       image-rendering: pixelated;
       font-family: "Shantell Sans", "Comic Sans MS", fantasy, sans-serif;
-      color: darkolivegreen;
-    }
-
-    .main-column {
       max-width: 50rem;
       margin: auto;
+      color: darkolivegreen;
     }
 
     ::selection {
@@ -59,15 +56,6 @@
         display: flex;
         flex-direction: row;
         align-items: stretch;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .interactive-cat {
-        display: none;
-      }
-      #layerNeko0 {
-        display: none;
       }
     }
 
@@ -147,70 +135,58 @@
 </head>
 
 <body>
-  <div class="interactive-cat">
-    <script>NekoType = "marmalade"</script>
-    <p id=nl>
-      <script src="https://webneko.net/n20171213.js"></script>
-    </p>
-    <p style="padding-left: 3rem;">Hi! Click me to play chase the bee.</p>
+  <div class="title-box box">
+    <div class="title-line">
+      <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-right: 1rem">
+      <h1>Welcome to my front yard!!!</h1>
+      <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-left: 1rem">
+    </div>
   </div>
 
-  <div class="main-column">
-    <div class="title-box box">
-      <div class="title-line">
-        <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-right: 1rem">
-        <h1>Welcome to my front yard!!!</h1>
-        <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-left: 1rem">
+  <div class="responsive-flex">
+    <main>
+      <div class="content-box box">
+        <h2>About me</h2>
+        <p><strong>Hi 👋, welcome to my little corner of the Internet :)</strong></p>
+        <p>I like to design and program cool and useful websites and apps. My passion is in software development, AI,
+          and
+          biology and linguistics. I'll share some of my work in linguistics and calligraphy soon. </p>
+        <p>I love learning languages. Languages that I speak include English, Chinese, Japanese, Toki Pona (conlang),
+          and
+          French
+          (still learning so not that fluent yet).</p>
       </div>
-    </div>
+    </main>
 
-    <div class="responsive-flex">
-      <main>
-        <div class="content-box box">
-          <h2>About me</h2>
-          <p><strong>Hi 👋, welcome to my little corner of the Internet :)</strong></p>
-          <p>I like to design and program cool and useful websites and apps. My passion is in software development, AI,
-            and
-            biology and linguistics. I'll share some of my work in linguistics and calligraphy soon. </p>
-          <p>I love learning languages. Languages that I speak include English, Chinese, Japanese, Toki Pona (conlang),
-            and
-            French
-            (still learning so not that fluent yet).</p>
-        </div>
-      </main>
-
-      <aside class="site-info-box box">
+    <aside class="site-info-box box">
         <h2>Site language</h2>
         <button disabled>English</button>
         <button disabled>Toki Pona</button>
 
         <h2>Site info</h2>
         <p style="margin-right: 1rem">Visitor counter:</p>
-        <p style="pointer-events: none">
-          <script type="text/javascript"
-                  src="//counter.websiteout.net/js/5/0/0/0"></script>
-        </p>
-      </aside>
-    </div>
-
-    <footer>
-      <div class="footer-box box">
-        <p>
-          <small>That's all from me, thanks for visiting my site! 💫 </small>
-          <small>Site last updated: 13 August 2023.</small>
-        </p>
-        <p>
-          <small><a href="https://links.cervonwong.com" target="_blank">Visit my other websites.</a></small>
-        </p>
-      </div>
-      <div class="footer-badge-row">
-        <img src="img/badge-any-browser.gif" alt="Best viewed with any browser.">
-        <img src="img/badge-singapore.gif" alt="Built in Singapore.">
-        <img src="img/badge-valid-html.png" alt="Powered by HTML.">
-        <img src="img/badge-valid-css.gif" alt="Powered by CSS.">
-      </div>
-    </footer>
+        <p style="pointer-events: none"><script type="text/javascript"
+                                                   src="//counter.websiteout.net/js/5/0/0/0"></script></p>
+    </aside>
   </div>
+
+  <footer>
+    <div class="footer-box box">
+      <p>
+        <small>That's all from me, thanks for visiting my site! 💫 </small>
+        <small>Site last updated: 13 August 2023.</small>
+      </p>
+      <p>
+        <small><a href="https://links.cervonwong.com" target="_blank">Visit my other websites.</a></small>
+      </p>
+    </div>
+    <div class="footer-badge-row">
+      <img src="img/badge-any-browser.gif" alt="Best viewed with any browser.">
+      <img src="img/badge-singapore.gif" alt="Built in Singapore.">
+      <img src="img/badge-valid-html.png" alt="Powered by HTML.">
+      <img src="img/badge-valid-css.gif" alt="Powered by CSS.">
+    </div>
+  </footer>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
