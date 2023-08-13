@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="e">
 
 <head>
   <meta charset="utf-8">
@@ -47,6 +47,26 @@
       color: lightgoldenrodyellow;
     }
 
+    .responsive-flex {
+      /*  Nothing */
+    }
+
+    @media (min-width: 600px) {
+      .responsive-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+      }
+    }
+
+    main {
+      flex: 4;
+    }
+
+    aside {
+      flex: 1;
+    }
+
     .box {
       background: lightgoldenrodyellow;
       border: 5px green solid;
@@ -62,7 +82,6 @@
     }
 
     .footer-box {
-      display: inline-block;
     }
 
     a {
@@ -83,7 +102,6 @@
       background-color: greenyellow;
       filter: drop-shadow(0.2rem 0.2rem 0 darkolivegreen);
       animation: infinite 1s alternate title-bounce linear;
-      margin-bottom: 0;
     }
 
     @keyframes title-bounce {
@@ -102,36 +120,48 @@
 
 <body>
   <div class="title-box box">
-    <h1>🌻 Welcome to my front yard!!! 🌻</h1>
+    <h1>🌻 Welcome to my front yard!!! 🌻 <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-left: 1rem"></h1>
+
   </div>
 
-  <div class="content-box box">
-    <h2>About me</h2>
-    <p><strong>Hi 👋, welcome to my little corner of the Internet :)</strong></p>
-    <p>I like to design and program cool and useful websites and apps. My passion is in software development, AI, and
-      biology and linguistics. I'll share some of my work in linguistics and calligraphy soon. </p>
-    <p>I love learning languages. Languages that I speak include English, Chinese, Japanese, Toki Pona (conlang), and
-      French
-      (still learning so not that fluent yet).</p>
+  <div class="responsive-flex">
+    <main>
+      <div class="content-box box">
+        <h2>About me</h2>
+        <p><strong>Hi 👋, welcome to my little corner of the Internet :)</strong></p>
+        <p>I like to design and program cool and useful websites and apps. My passion is in software development, AI,
+          and
+          biology and linguistics. I'll share some of my work in linguistics and calligraphy soon. </p>
+        <p>I love learning languages. Languages that I speak include English, Chinese, Japanese, Toki Pona (conlang),
+          and
+          French
+          (still learning so not that fluent yet).</p>
+      </div>
+    </main>
+
+    <aside class="site-info-box box">
+        <h2>Site language</h2>
+        <button disabled>English</button>
+        <button disabled>Toki Pona</button>
+
+        <h2>Site info</h2>
+        <p style="margin-right: 1rem">Visitor counter:</p>
+        <p style="pointer-events: none"><script type="text/javascript"
+                                                   src="//counter.websiteout.net/js/5/0/0/0"></script></p>
+    </aside>
   </div>
 
-  <div class="site-info-box box">
-    <h2>Site info</h2>
-    <span style="margin-right: 1rem">Visitor counter:</span>
-    <span style="pointer-events: none"><script type="text/javascript"
-                                               src="//counter.websiteout.net/js/5/0/0/0"></script></span>
-    <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-left: 1rem">
-  </div>
-
-  <div class="footer-box box">
-    <p>
-      <small>That's all from me, thanks for visiting my site! 💫 </small>
-      <small>Site last updated: 13 August 2023.</small>
-    </p>
-    <p>
-      <small><a href="https://links.cervonwong.com" target="_blank">Visit my other websites.</a></small>
-    </p>
-  </div>
+  <footer>
+    <div class="footer-box box">
+      <p>
+        <small>That's all from me, thanks for visiting my site! 💫 </small>
+        <small>Site last updated: 13 August 2023.</small>
+      </p>
+      <p>
+        <small><a href="https://links.cervonwong.com" target="_blank">Visit my other websites.</a></small>
+      </p>
+    </div>
+  </footer>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
