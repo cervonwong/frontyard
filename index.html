@@ -47,14 +47,19 @@
       color: lightgoldenrodyellow;
     }
 
+    .site-wrapper {
+      margin: 0 0.5rem;
+    }
+
     .responsive-flex {
       /*  Nothing */
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: 38rem) {
       .responsive-flex {
         display: flex;
         flex-direction: row;
+        gap: 1rem;
         align-items: stretch;
       }
     }
@@ -71,8 +76,6 @@
       background: lightgoldenrodyellow;
       border: 5px green solid;
       padding: 0.5rem;
-      margin-left: 0.5rem;
-      margin-right: 0.5rem;
       margin-bottom: 1.2rem;
     }
 
@@ -95,7 +98,7 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.1rem;
       align-items: center;
       justify-content: center;
       margin-bottom: 1rem;
@@ -139,66 +142,70 @@
 </head>
 
 <body>
-  <div class="title-box box">
-    <div class="title-line">
-      <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-right: 1rem">
-      <h1>Welcome to my front yard!!!</h1>
-      <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-left: 1rem">
-    </div>
-  </div>
-
-  <div class="responsive-flex">
-    <main>
-      <div class="content-box box">
-        <h2>About me</h2>
-        <p><strong>Hi 👋, welcome to my little corner of the Internet :)</strong></p>
-        <p>I like to design and program cool and useful websites and apps. My passion is in software development, AI,
-          and
-          biology and linguistics. I'll share some of my work in linguistics and calligraphy soon. </p>
-        <p>I love learning languages. Languages that I speak include English, Chinese, Japanese, Toki Pona (conlang),
-          and
-          French
-          (still learning so not that fluent yet).</p>
+  <div class="site-wrapper">
+    <div class="title-box box">
+      <div class="title-line">
+        <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-right: 1rem">
+        <h1>Welcome to my front yard!!!</h1>
+        <img src="img/butterflies.gif" alt="Butterflies flying." height="60" width="60" style="margin-left: 1rem">
       </div>
-    </main>
+    </div>
 
-    <aside class="site-info-box box">
-      <h2>Site language</h2>
-      <button disabled>English</button>
-      <button disabled>Toki Pona</button>
+    <div class="responsive-flex">
+      <main>
+        <div class="content-box box">
+          <h2>About me</h2>
+          <p><strong>Hi 👋, welcome to my little corner of the Internet :)</strong></p>
+          <p>I like to design and program cool and useful websites and apps. My passion is in software development, AI,
+            and
+            biology and linguistics. I'll share some of my work in linguistics and calligraphy soon. </p>
+          <p>I love learning languages. Languages that I speak include English, Chinese, Japanese, Toki Pona (conlang),
+            and
+            French
+            (still learning so not that fluent yet).</p>
+        </div>
+      </main>
 
-      <!--        <h2>Site info</h2>-->
-      <!--        <p style="margin-right: 1rem">Visitor counter:</p>-->
-      <!--        <p style="pointer-events: none"><script type="text/javascript"-->
-      <!--                                                   src="//counter.websiteout.net/js/5/0/0/0"></script></p>-->
-    </aside>
+      <aside class="site-info-box box">
+        <h2>Site language</h2>
+        <button disabled>English</button>
+        <button disabled>Toki Pona</button>
+
+        <!--        <h2>Site info</h2>-->
+        <!--        <p style="margin-right: 1rem">Visitor counter:</p>-->
+        <!--        <p style="pointer-events: none"><script type="text/javascript"-->
+        <!--                                                   src="//counter.websiteout.net/js/5/0/0/0"></script></p>-->
+      </aside>
+    </div>
+
+    <footer>
+      <div class="footer-box box">
+        <p>
+          <small>That's all from me, thanks for visiting my site! 💫 </small>
+          <small>Site last updated: 13 August 2023.</small>
+        </p>
+        <p>
+          <small><a href="https://links.cervonwong.com" target="_blank">Visit my other websites.</a></small>
+        </p>
+      </div>
+      <div class="footer-badge-row">
+        <a href="https://links.cervonwong.com" target="_blank">
+          <img src="img/badge-links.gif" alt="Visit my other sites!">
+        </a>
+        <img src="img/badge-any-browser.gif" alt="Best viewed with any browser.">
+        <img src="img/badge-imagination.gif" alt="This site is powered by imagination.">
+        <img src="img/badge-handcoded.gif" alt="Completely hand-coded.">
+        <!--      <img src="img/badge-singapore.gif" alt="Built in Singapore.">-->
+        <img src="img/badge-valid-html.png" alt="Powered by HTML.">
+        <img src="img/badge-valid-css.gif" alt="Powered by CSS.">
+      </div>
+    </footer>
+
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/vendor/firebase.js"></script>
   </div>
-
-  <footer>
-    <div class="footer-box box">
-      <p>
-        <small>That's all from me, thanks for visiting my site! 💫 </small>
-        <small>Site last updated: 13 August 2023.</small>
-      </p>
-      <p>
-        <small><a href="https://links.cervonwong.com" target="_blank">Visit my other websites.</a></small>
-      </p>
-    </div>
-    <div class="footer-badge-row">
-      <a href="https://links.cervonwong.com" target="_blank">
-        <img src="img/badge-links.gif" alt="Visit my other sites!">
-      </a>
-      <img src="img/badge-any-browser.gif" alt="Best viewed with any browser.">
-      <img src="img/badge-singapore.gif" alt="Built in Singapore.">
-      <img src="img/badge-valid-html.png" alt="Powered by HTML.">
-      <img src="img/badge-valid-css.gif" alt="Powered by CSS.">
-    </div>
-  </footer>
-
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-  <script type="module" src="js/vendor/firebase.js"></script>
 </body>
 
 </html>
