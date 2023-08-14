@@ -47,6 +47,47 @@
       color: lightgoldenrodyellow;
     }
 
+    a {
+      color: green;
+      font-weight: 600;
+      text-decoration: green wavy underline;
+    }
+
+    a:hover {
+      background-color: greenyellow;
+      color: darkgreen;
+      text-decoration: darkgreen wavy underline;
+    }
+
+    h1, h2 {
+      font-weight: 600;
+      background-color: greenyellow;
+      animation: infinite 1s alternate title-bounce linear;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+      border: yellowgreen 0.3rem outset;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      border: yellowgreen 0.2rem outset;
+    }
+
+    @keyframes title-bounce {
+      0% {
+        font-variation-settings: "wght" 600, "BNCE" -100;
+      }
+      50% {
+        font-variation-settings: "wght" 600, "BNCE" 0;
+      }
+      100% {
+        font-variation-settings: "wght" 600, "BNCE" 100;
+      }
+    }
+
     .site-wrapper {
       margin: 0 0.5rem;
     }
@@ -74,7 +115,7 @@
 
     .box {
       background: lightgoldenrodyellow;
-      border: 5px goldenrod outset;
+      border: 0.3rem goldenrod outset;
       padding: 0.5rem;
       margin-bottom: 1.2rem;
     }
@@ -102,47 +143,6 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 1rem;
-    }
-
-    a {
-      color: green;
-      font-weight: 600;
-      text-decoration: green wavy underline;
-    }
-
-    a:hover {
-      background-color: greenyellow;
-      color: darkgreen;
-      text-decoration: darkgreen wavy underline;
-    }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 600;
-      text-align: center;
-      background-color: greenyellow;
-      border: yellowgreen 0.3rem outset;
-      animation: infinite 1s alternate title-bounce linear;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      background-color: greenyellow;
-      border: yellowgreen 0.3rem outset;
-      animation: infinite 1s alternate title-bounce linear;
-    }
-
-    @keyframes title-bounce {
-      0% {
-        font-variation-settings: "wght" 600, "BNCE" -100;
-      }
-      50% {
-        font-variation-settings: "wght" 600, "BNCE" 0;
-      }
-      100% {
-        font-variation-settings: "wght" 600, "BNCE" 100;
-      }
     }
   </style>
 </head>
