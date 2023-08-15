@@ -125,16 +125,16 @@
       outline-offset: 0.1rem;
     }
 
-    .site-wrapper {
+    .content-wrapper {
       margin: 0 0.5rem;
     }
 
-    .responsive-flex {
+    .main-and-aside-wrapper {
       /*  Nothing */
     }
 
     @media (min-width: 38rem) {
-      .responsive-flex {
+      .main-and-aside-wrapper {
         display: flex;
         flex-direction: row;
         gap: 1rem;
@@ -164,7 +164,7 @@
       margin-bottom: 3rem;
     }
 
-    .title-line {
+    .title-box-contents {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -194,20 +194,20 @@
 </head>
 
 <body>
-  <div class="site-wrapper">
-    <div class="title-box box">
-      <div class="title-line">
+  <div class="content-wrapper">
+    <header class="title-box box">
+      <div class="title-box-contents">
         <img src="img/decoration-butterflies.gif" alt="Butterflies flying." height="60" width="60"
              style="margin-right: 1rem">
         <h1>Welcome to my front yard!!!</h1>
         <img src="img/decoration-butterflies.gif" alt="Butterflies flying." height="60" width="60"
              style="margin-left: 1rem">
       </div>
-    </div>
+    </header>
 
-    <div class="responsive-flex">
+    <div class="main-and-aside-wrapper">
       <main>
-        <div class="content-box box">
+        <section class="content-box box">
           <p><strong>Hello fellow wanderer</strong> 👋, you've arrived at my little part of the internet (affectionately
             dubbed "my front yard") where I share my
             hobbies and where I keep a record of the cool stuff that I have collected over time. 💫</p>
@@ -226,7 +226,7 @@
             <a href="http://vanilla-js.com/" target="_blank">VanillaJS</a>. I drew the pixel art graphics using
             <a href="https://www.aseprite.org/" target="_blank">Aseprite</a>, my favourite pixel art software.
             My yard is always under construction and remodelling 🚧, stay tuned for updates!</p>
-        </div>
+        </section>
       </main>
 
       <aside class="site-info-box box">
@@ -245,7 +245,7 @@
     </div>
 
     <footer>
-      <div class="footer-box box">
+      <section class="footer-box box">
         <p>
           <small>🌱 That's all from me, thanks for stopping by my front yard! 🌱 </small><br>
           <small>Site last updated: 15 August 2023.</small>
@@ -255,8 +255,8 @@
             👉 Visit my other websites. 👈
           </a>
         </p>
-      </div>
-      <div class="footer-badge-row">
+      </section>
+      <section class="footer-badge-row">
         <a href="https://links.cervonwong.com" target="_blank">
           <img src="img/badge-links.gif" alt="Visit my other sites!">
         </a>
@@ -267,7 +267,7 @@
         <img src="img/badge-valid-css.gif" alt="Powered by CSS.">
         <img src="img/badge-vanillajs.png" alt="Powered by VanillaJS.">
         <img src="img/badge-singapore.gif" alt="Built in Singapore.">
-      </div>
+      </section>
     </footer>
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
