@@ -48,7 +48,7 @@
     }
 
     ::selection {
-      background: darkolivegreen;
+      background: green;
       color: lightgoldenrodyellow;
     }
 
@@ -118,6 +118,21 @@
       border: goldenrod 0.2rem inset;
       background-color: goldenrod;
       color: darkgoldenrod;
+    }
+
+    .aside-nav-ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .aside-nav-li {
+      margin: 0;
+      padding: 0.6rem 0 0.6rem 2.2rem;
+      list-style: none;
+      background-image: url("img/bullet-flower.gif");
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 2rem;
     }
 
     :focus-visible {
@@ -234,16 +249,14 @@
             <a href="https://www.aseprite.org/" target="_blank">Aseprite</a>, my favourite pixel art software.
             My yard is always under construction and remodelling 🚧, so stay tuned for updates!</p>
           <p><a href="about-yard.html">More details about my yard</a></p>
-          <img src="img/banner-construction.gif"
-               alt="This site is under construction."
-               height="16">
+          <img src="img/decoration-under-construction.gif" alt="This site is under construction.">
         </section>
       </main>
 
       <aside class="site-info-box box">
         <h2>Navigation</h2>
-        <ul class="nav-ul">
-          <li class="nav-li">
+        <ul class="aside-nav-ul">
+          <li class="aside-nav-li">
             <a href="about-yard.html">About yard</a>
           </li>
         </ul>
@@ -257,6 +270,11 @@
         <!--        <p style="margin-right: 1rem">Visitor counter:</p>-->
         <!--        <p style="pointer-events: none"><script type="text/javascript"-->
         <!--                                                   src="//counter.websiteout.net/js/5/0/0/0"></script></p>-->
+        <img src="img/decoration-blue-flower.gif"
+             alt="A blue flower."
+             height="60"
+             width="60"
+             style="display: block; margin-left: auto; margin-right: auto; margin-top: 1rem;">
       </aside>
     </div>
 
