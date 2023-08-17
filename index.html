@@ -286,15 +286,11 @@
             <button onClick="alert('Not implemented yet!');">English</button>
             <button onClick="alert('Not implemented yet!');">toki pona</button>
           </div>
-          <!--        <h2>Site info</h2>-->
-          <!--        <p style="margin-right: 1rem">Visitor counter:</p>-->
-          <!--        <p style="pointer-events: none"><script type="text/javascript"-->
-          <!--                                                   src="//counter.websiteout.net/js/5/0/0/0"></script></p>-->
-          <img src="img/decoration-blue-flower.gif"
-               alt="A blue flower."
-               height="60"
-               width="60"
-               style="display: block; margin-left: auto; margin-right: auto; margin-top: 1rem;">
+          <hr>
+          <p>You're visitor number</p>
+          <p id="visitor-counter" style="pointer-events: none">
+            <!-- View counter will be added here by script below. -->
+          </p>
         </aside>
       </div>
     </main>
@@ -324,6 +320,19 @@
         <img src="img/badge-singapore.gif" alt="Built in Singapore.">
       </section>
     </footer>
+
+    <!-- Add view counter -->
+    <script>
+      var p = document.getElementById("visitor-counter");
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.onload = function () {
+        callFunctionFromScript();
+      }
+
+      s.src = '//counter1.fc2.com/counter.php?id=39224302&main=1'
+      p.appendChild(s);
+    </script>
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
