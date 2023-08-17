@@ -118,12 +118,12 @@
       color: darkgoldenrod;
     }
 
-    .aside-nav-ul {
+    .top-nav-ul, .aside-nav-ul {
       margin: 0;
       padding: 0;
     }
 
-    .aside-nav-li {
+    .top-nav-li, .aside-nav-li {
       margin: 0;
       padding: 0.6rem 0 0.6rem 2.2rem;
       list-style: none;
@@ -142,21 +142,16 @@
       margin: 0 0.5rem;
     }
 
-    .main-and-aside-wrapper {
+    .questions-and-aside-box-wrapper {
       /*  Nothing */
     }
 
     @media (min-width: 38rem) {
-      .main-and-aside-wrapper {
+      .questions-and-aside-box-wrapper {
         display: flex;
         flex-direction: row;
         gap: 1rem;
       }
-    }
-
-    main {
-      display: flex;
-      flex: 3;
     }
 
     aside {
@@ -172,10 +167,20 @@
       box-shadow: green 0.2rem 0.2rem 0.2rem 0;
     }
 
-    .title-box {
+    .header-box {
       background: palegoldenrod;
       margin-top: 4rem;
-      margin-bottom: 3rem;
+      margin-bottom: 0;
+      border-radius: 1rem 0 0 0;
+    }
+
+    .intro-box {
+      border-top: none;
+      border-radius: 0 0 1rem 0;
+    }
+
+    .questions-box {
+      flex: 3;
     }
 
     .title-box-contents {
@@ -209,7 +214,7 @@
 
 <body>
   <div class="content-wrapper">
-    <header class="title-box box">
+    <header class="header-box box">
       <div class="title-box-contents">
         <img src="img/decoration-butterflies.gif"
              alt="Butterflies flying."
@@ -225,14 +230,30 @@
       </div>
     </header>
 
-    <div class="main-and-aside-wrapper">
-      <main>
-        <section class="content-box box">
-          <p><strong>Hello fellow wanderer</strong> 👋, you've arrived at my little part of the internet (affectionately
-            dubbed my "yard") where I share my
-            hobbies and where I keep a record of the cool stuff that I have collected over time. 💫</p>
-          <p>Have fun exploring each nook and cranny of my yard :)</p>
+    <main>
+      <section class="intro-box box">
+        <p><strong>Hello fellow wanderer</strong> 👋, you've arrived at my little part of the internet (affectionately
+          dubbed my "yard") where I share my
+          hobbies and where I keep a record of the cool stuff that I have collected over time. 💫</p>
+        <p>Have fun exploring each nook and cranny of my yard below :)</p>
+      </section>
 
+      <nav class="top-nav">
+        <ul class="top-nav-ul">
+          <li class="top-nav-li">
+            <a href="construction.html">Flower garden</a>
+          </li>
+          <li class="top-nav-li">
+            <a href="construction.html">Secret chest</a>
+          </li>
+          <li class="top-nav-li">
+            <a href="construction.html">Sandbox</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="questions-and-aside-box-wrapper">
+        <section class="questions-box box">
           <h2>Who am I?</h2>
           <p>I'm a graduating high-school student. I like to program and design useful apps. Currently, my
             passion is in software development, AI, biology and linguistics. I'll share some of my work in linguistics
@@ -246,35 +267,37 @@
             <a href="http://vanilla-js.com/" target="_blank">VanillaJS</a>. I drew the pixel art graphics using
             <a href="https://www.aseprite.org/" target="_blank">Aseprite</a>, my favourite pixel art software.
             My yard is always under construction and remodelling 🚧, so stay tuned for updates!</p>
-          <p><a href="about-yard.html">More details about my yard</a></p>
+          <p><a href="construction.html">More details about my yard</a></p>
           <img src="img/decoration-under-construction.gif" alt="This site is under construction.">
         </section>
-      </main>
 
-      <aside class="site-info-box box">
-        <h2>Navigation</h2>
-        <ul class="aside-nav-ul">
-          <li class="aside-nav-li">
-            <a href="about-yard.html">About yard</a>
-          </li>
-        </ul>
-        <p><small>Website development in progress... No pages yet!</small></p>
-        <h2>Change language</h2>
-        <div class="language-button-bar">
-          <button onClick="alert('Not implemented yet!');">English</button>
-          <button onClick="alert('Not implemented yet!');">toki pona</button>
-        </div>
-        <!--        <h2>Site info</h2>-->
-        <!--        <p style="margin-right: 1rem">Visitor counter:</p>-->
-        <!--        <p style="pointer-events: none"><script type="text/javascript"-->
-        <!--                                                   src="//counter.websiteout.net/js/5/0/0/0"></script></p>-->
-        <img src="img/decoration-blue-flower.gif"
-             alt="A blue flower."
-             height="60"
-             width="60"
-             style="display: block; margin-left: auto; margin-right: auto; margin-top: 1rem;">
-      </aside>
-    </div>
+        <aside class="site-info-box box">
+          <nav class="aside-nav">
+            <h2>Info links</h2>
+            <ul class="aside-nav-ul">
+              <li class="aside-nav-li">
+                <a href="construction.html">About yard</a>
+              </li>
+            </ul>
+          </nav>
+          <p><small>Website development in progress... No pages yet!</small></p>
+          <h2>Change language</h2>
+          <div class="language-button-bar">
+            <button onClick="alert('Not implemented yet!');">English</button>
+            <button onClick="alert('Not implemented yet!');">toki pona</button>
+          </div>
+          <!--        <h2>Site info</h2>-->
+          <!--        <p style="margin-right: 1rem">Visitor counter:</p>-->
+          <!--        <p style="pointer-events: none"><script type="text/javascript"-->
+          <!--                                                   src="//counter.websiteout.net/js/5/0/0/0"></script></p>-->
+          <img src="img/decoration-blue-flower.gif"
+               alt="A blue flower."
+               height="60"
+               width="60"
+               style="display: block; margin-left: auto; margin-right: auto; margin-top: 1rem;">
+        </aside>
+      </div>
+    </main>
 
     <footer>
       <section class="footer-box box">
