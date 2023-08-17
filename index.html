@@ -75,7 +75,6 @@
 
     h1, h2 {
       font-weight: 700;
-      background-color: greenyellow;
       animation: infinite 1s alternate title-bounce linear;
     }
 
@@ -93,13 +92,30 @@
 
     h1 {
       font-size: 2rem;
+      background-color: greenyellow;
       text-align: center;
       border: yellowgreen 0.3rem double;
     }
 
     h2 {
+      align-items: center;
       font-size: 1rem;
-      border: yellowgreen 0.3rem double;
+      padding: 0.2rem 0.5rem 0 0.5rem;
+      background-image: linear-gradient(to right,rgba(173,255,47,80%) 10%, rgba(173,255,47, 0%) 100%);
+    }
+
+    h2:after {
+      content: "";
+      display: block;
+      height: 0.15rem;
+      margin: 0 -0.5rem;
+      background-image: linear-gradient(to right,rgba(0,128,0,30%) 10%, rgba(0,128,0,0%) 100%);
+    }
+
+    hr {
+      border: none;
+      height: 0.15rem;
+      background-image: linear-gradient(to right,rgba(0,128,0,30%) 10%, rgba(0,128,0,0%) 100%);
     }
 
     button {
@@ -161,10 +177,13 @@
     .box {
       background: lightgoldenrodyellow;
       border: 0.3rem goldenrod ridge;
-      padding: 0.5rem;
       margin-bottom: 1.2rem;
       border-radius: 1rem 0;
       box-shadow: green 0.2rem 0.2rem 0.2rem 0;
+    }
+
+    .box p, .box .pad-horizontal {
+      padding: 0 0.5rem;
     }
 
     .header-box {
@@ -176,6 +195,7 @@
 
     .intro-box {
       border-top: none;
+      padding-top: 0.01rem; /* For padding collapse with p*/
       border-radius: 0 0 1rem 0;
     }
 
@@ -274,22 +294,24 @@
         <aside class="site-info-box box">
           <nav class="aside-nav">
             <h2>Info links</h2>
-            <ul class="aside-nav-ul">
+            <ul class="aside-nav-ul pad-horizontal">
               <li class="aside-nav-li">
                 <a href="construction.html">About yard</a>
               </li>
             </ul>
           </nav>
-          <p><small>Website development in progress... No pages yet!</small></p>
           <h2>Change language</h2>
-          <div class="language-button-bar">
+          <div class="language-button-bar pad-horizontal">
             <button onClick="alert('Not implemented yet!');">English</button>
             <button onClick="alert('Not implemented yet!');">toki pona</button>
           </div>
           <hr>
-          <p id="visitor-counter" style="pointer-events: none">
-            You're visitor number <br>
-            <!-- View counter will be added here by script below. -->
+          <p>
+            <span>You're visitor number</span>
+            <span id="visitor-counter" style="pointer-events: none">
+              <!-- View counter will be added here by script below. -->
+            </span>
+            <span>!</span>
           </p>
         </aside>
       </div>
@@ -323,15 +345,11 @@
 
     <!-- Add view counter -->
     <script>
-      var p = document.getElementById("visitor-counter");
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.onload = function () {
-        callFunctionFromScript();
-      }
-
-      s.src = '//counter1.fc2.com/counter.php?id=39224302&main=1'
-      p.appendChild(s);
+      var span = document.getElementById("visitor-counter");
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = '//counter1.fc2.com/counter.php?id=39224302&main=1'
+      span.appendChild(script);
     </script>
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
