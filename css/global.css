@@ -1,0 +1,37 @@
+/* Used in all HTML files. */
+
+body {
+  font-family: "Shantell Sans", "Comic Sans MS", fantasy, sans-serif;
+
+  max-width: 50rem; /* 800px */
+  padding: 0 0.5rem; /* Horizontal padding on mobile. */
+  margin: auto;
+}
+
+/* Back link styled like a button in subpages. */
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  border-radius: 50%;
+  border:  0.2rem solid darkgoldenrod;
+  padding: 0.2rem 0.5rem;
+  background-image: linear-gradient(to bottom, rgb(218,165,32,100%) 0, rgba(218,165,32,50%) 100%);
+  color: #6c4c05;
+  box-shadow: rgba(0,0,0,30%) 0.2rem 0.2rem 0.2rem 0;
+}
+
+.back-link:hover {
+  background-image: linear-gradient(to bottom, rgb(218,165,32,80%) 0, rgba(218,165,32,50%) 50%);
+  color: darkgoldenrod;
+}
+
+.back-link:active {
+  background-image: linear-gradient(to bottom, rgb(218,165,32,50%) 0, rgba(218,165,32,30%) 80%);
+  color: darkgoldenrod;
+  box-shadow: none;
+}
