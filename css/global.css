@@ -1,5 +1,13 @@
 /* Used in all HTML files. */
 
+html {
+  cursor: url('/img/cursor-bee-default.png'), auto;
+}
+
+a, button {
+  cursor: url('/img/cursor-bee-pointer.png'), auto;
+}
+
 body {
   font-family: "Shantell Sans", "Comic Sans MS", fantasy, sans-serif;
 

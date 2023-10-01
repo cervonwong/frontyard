@@ -29,13 +29,28 @@
       image-rendering: pixelated;
     }
 
+    ::selection {
+      background: yellow;
+      color: black;
+    }
+
     nav, h1, p.subtitle {
       text-align: center;
     }
 
     h1 {
+      font-size: 3rem;
       font-weight: 700;
       animation: infinite 1s alternate title-bounce linear;
+
+      background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3), transparent);
+      line-height: 1;
+      padding: 0.5rem 0;
+
+      color: yellow;
+      text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+      1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black,
+      0.2rem 0.2rem 0.2rem rgba(0,0,0,30%);
     }
 
     @keyframes title-bounce {
@@ -48,18 +63,6 @@
       100% {
         font-variation-settings: "wght" 700, "BNCE" 100;
       }
-    }
-
-    h1 {
-      font-size: 4rem;
-      background-color: rgba(255, 255, 255, 0.30);
-      line-height: 1;
-      padding: 0.5rem 0;
-
-      color: yellow;
-      text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
-      1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black,
-      0.2rem 0.2rem 0.2rem rgba(0,0,0,30%);
     }
 
     ul {
@@ -85,7 +88,7 @@
     }
 
     img {
-      max-width: 100%;
+      max-width: 90%;
       margin: 0.5rem;
     }
 
@@ -95,6 +98,28 @@
 
     img.cny2023 {
       border: #de7a7a 10px outset;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+    .date {
+      display: inline-block;
+      font-weight: 600;
+      border: gray 0.2rem double;
+      background-color: #efefef;
+      padding: 0.3rem;
+      color: black;
+    }
+
+    .date:before {
+      content: "📅 ";
+    }
+
+    hr.cny2023 {
+      border: 0;
+      border-top: #d35050 0.25rem dashed;
     }
   </style>
 </head>
@@ -107,21 +132,25 @@
   <ul>
     <li class="maf2023">
       <h2>🏮 Mid-Autumn Festival 2023 🏮</h2>
-      <span>[<time>2023-09-04</time>]</span>
+      <time class="date">2023-09-04</time>
       <br>
-      <img class="maf2023" src="img/calligraphy/20230930-zhongqiu-close.jpeg" width="500" alt="">
-      <img class="maf2023" src="img/calligraphy/20230930-zhongqiu-wide.jpeg" width="500" alt="">
-      <img class="maf2023" src="img/calligraphy/20230930-qiu-close.jpeg" width="500" alt="">
-      <img class="maf2023" src="img/calligraphy/20230930-zhongqiujie-yellow.jpeg" width="500" alt="">
+      <img class="maf2023" src="img/calligraphy/20230930-zhongqiu-close.jpeg" width="400" alt="">
+      <img class="maf2023" src="img/calligraphy/20230930-zhongqiu-wide.jpeg" width="400" alt="">
+      <img class="maf2023" src="img/calligraphy/20230930-qiu-close.jpeg" width="400" alt="">
+      <img class="maf2023" src="img/calligraphy/20230930-zhongqiujie-yellow.jpeg" width="400" alt="">
     </li>
     <li class="cny2023">
       <h2>🧧 Chinese New Year 2023 🧧</h2>
-      <span>[<time>2023-01-22</time>]</span>
+      <time class="date">2023-01-28</time>
       <br>
-      <img class="cny2023" src="img/calligraphy/20230122-fei.jpeg" width="500" height="500" alt="">
-      <img class="cny2023" src="img/calligraphy/20230122-jin.jpeg" width="500" height="500" alt="">
-      <img class="cny2023" src="img/calligraphy/20230122-tu.jpeg" width="500" height="500" alt="">
-      <img class="cny2023" src="img/calligraphy/20230122-zhan.jpeg" width="500" height="500" alt="">
+      <img class="cny2023" src="img/calligraphy/20230128-chun.jpeg" width="550" alt="">
+      <hr class="cny2023">
+      <time class="date">2023-01-22</time>
+      <br>
+      <img class="cny2023" src="img/calligraphy/20230122-fei.jpeg" width="400" style="aspect-ratio: 1" alt="">
+      <img class="cny2023" src="img/calligraphy/20230122-jin.jpeg" width="400" style="aspect-ratio: 1" alt="">
+      <img class="cny2023" src="img/calligraphy/20230122-tu.jpeg" width="400" style="aspect-ratio: 1" alt="">
+      <img class="cny2023" src="img/calligraphy/20230122-zhan.jpeg" width="400" style="aspect-ratio: 1" alt="">
     </li>
   </ul>
   <hr>
