@@ -18,30 +18,70 @@
 
   <style>
     body {
-      background-color: beige;
       max-width: 80rem; /* 1280px */
+
+      background-color: #222034;
+      color: white;
+
+      background-image: url('img/background-nightsky.gif');
+      background-size: 6rem 6rem;
+      background-repeat: repeat;
+      image-rendering: pixelated;
+    }
+
+    nav, h1, p.subtitle {
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 700;
+      animation: infinite 1s alternate title-bounce linear;
+    }
+
+    @keyframes title-bounce {
+      0% {
+        font-variation-settings: "wght" 700, "BNCE" -100;
+      }
+      50% {
+        font-variation-settings: "wght" 700, "BNCE" 0;
+      }
+      100% {
+        font-variation-settings: "wght" 700, "BNCE" 100;
+      }
+    }
+
+    h1 {
+      font-size: 4rem;
+      background-color: rgba(255, 255, 255, 0.30);
+      line-height: 1;
+      padding: 0.5rem 0;
+
+      color: yellow;
+      text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+      1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black,
+      0.2rem 0.2rem 0.2rem rgba(0,0,0,30%);
     }
 
     ul {
+      color: black;
       margin: 0;
       padding: 0;
     }
 
     li {
-      margin: 0;
-      margin-bottom: 1rem;
+      margin: 0 0 1rem;
       padding: 1rem;
       list-style-type: none;
     }
 
     li.maf2023 {
       border: sandybrown 0.35rem dotted;
-      background-color: seashell;
+      background-color: rgba(255, 245, 238, 0.9);
     }
 
     li.cny2023 {
       border: #d35050 0.25rem dashed;
-      background-color: #ffebf0;
+      background-color: rgba(255, 235, 240, 0.9);
     }
 
     img {
@@ -63,7 +103,7 @@
     <a class="back-link" href="/">← Back</a>
   </nav>
   <h1>Gallery</h1>
-  <p>Some of my calligraphy work.</p>
+  <p class="subtitle">Some of my calligraphy work.</p>
   <ul>
     <li class="maf2023">
       <h2>🏮 Mid-Autumn Festival 2023 🏮</h2>
