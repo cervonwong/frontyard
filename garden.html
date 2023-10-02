@@ -16,6 +16,21 @@
         rel="stylesheet">
 
   <style>
+    body {
+      background-image: url('img/background-ground.png');
+      background-size: 4rem 4rem;
+      background-repeat: repeat;
+      image-rendering: pixelated;
+
+      background-color: #ffb719;
+      color: black;
+    }
+
+    ::selection {
+      background: #ffb719;
+      color: black;
+    }
+
     nav {
       padding-top: 1rem;
     }
@@ -24,49 +39,100 @@
       transform: scale(1.3);
     }
 
-    body {
-      background-color: pink;
+    ol {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 0.5rem;
+
+      color: white;
+
+      padding: 2rem;
+      border-image: url("img/background-flowerpot.png") 8 / 1.5rem / 0 round;
+      background-image: url('img/background-dirt.png');
+      background-size: 4rem 4rem;
+      background-repeat: repeat;
+
+      box-shadow: rgba(182, 112, 42, 0.62) 0 0.2rem 0.3rem 0.2rem;
+    }
+
+    ol a:visited {
+      color: pink;
     }
 
     li {
-      list-style-type: square;
+      list-style-type: none;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    li::before {
+      content: '';
+      display: block;
+      margin: 0 auto 0.5rem auto;
+      height: 72px;
+      width: 57px;
+      background-size: 57px 72px;
+    }
+
+    li:nth-child(2n)::before {
+      background-image: url("img/flower-blue-daisy.png");
+    }
+
+    li:nth-child(2n+1)::before {
+      background-image: url("img/flower-sunflower.png");
+    }
+
+    li time {
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="/"><img src="img/back.gif" alt=""></a>
+    <a href="/"><img src="img/button-back.gif" alt=""></a>
   </nav>
   <h1>Flower garden</h1>
-  <p>I plant a flower everytime I learn something new.</p>
+  <p>I plant a flower for each new thing I learn or come across, kinda like a diary.</p>
   <ol>
     <li>
+      <time>2023-09-27</time>
+      <div>TIL the algorithm to find median from a list.</div>
+    </li>
+    <li>
+      <time>2023-09-16</time>
+      <div>TIL that there is a faster search than binary search.</div>
+    </li>
+    <li>
+      <time>2023-09-15</time>
+      <div>TIL how to design interfaces for VR.</div>
+    </li>
+    <li>
       <time>2023-09-04</time>
-      <span>Today I started learning React & NextJS.</span>
+      <div>Today I started learning React & NextJS.</div>
     </li>
     <li>
       <time>2023-09-02</time>
-      <span>TIL how CloudFlare works.</span>
+      <div>TIL how CloudFlare works.</div>
     </li>
     <li>
       <time>2023-08-23</time>
-      <span>Discovered an open-source <a href="https://www.theodinproject.com/" target="_blank">resource</a> teaching web dev</span>
+      <div>Discovered an open-source <a href="https://www.theodinproject.com/" target="_blank">resource</a> teaching web dev</div>
     </li>
     <li>
       <time>2023-08-18</time>
-      <span>TIL how to use <code>.htaccess</code>.</span></li>
+      <div>TIL how to use <code>.htaccess</code>.</div></li>
     <li>
       <time>2023-08-17</time>
-      <span>TIL how to run external scripts in JS.</span></li>
+      <div>TIL how to run external scripts in JS.</div></li>
     <li>
       <time>2023-08-16</time>
-      <span>TIL how to use descriptive HTML elements.</span></li>
+      <div>TIL how to use descriptive HTML elements.</div></li>
     <li>
       <time>2023-08-15</time>
-      <span>TIL that I don't know how bundlers work.</span></li>
+      <div>TIL that I don't know how bundlers work.</div></li>
     <li>
       <time>2023-08-14</time>
-      <span>TIL how to create a site in VanillaJS.</span></li>
+      <div>TIL how to create a site in VanillaJS.</div></li>
   </ol>
   <img src="img/decoration-under-construction.gif" alt="This site is under construction.">
 </body>
